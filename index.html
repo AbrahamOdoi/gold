@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>jQuery Mobile Bootstrap Theme</title>
+		<link rel="stylesheet" href="themes/Bootstrap.css">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+		<script>
+			var userAgent = navigator.userAgent + '';
+			if (userAgent.indexOf('iPhone') > -1) {
+				document.write('<script src="scripts/cordova-iphone.js"></sc' + 'ript>');
+				var mobile_system = 'iphone';
+			} else if (userAgent.indexOf('Android') > -1) {
+				document.write('<script src="scripts/cordova-android.js"></sc' + 'ript>');
+				var mobile_system = 'android';
+			} else {
+				var mobile_system = '';
+			}
+		</script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body>
+		<div data-role="page" data-theme="d" style="background: #8f994c;">
+			<div data-role="content" data-theme="c" style="text-align: center;background: #8f994c;padding-top: 30%">
+				<img src="deywuro.png" />
+				<div class="login-form" style="box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); padding: 45px;text-align: center; font-family: 'Roboto', sans-serif; outline: 0;background: white;">
+					<input type="text" placeholder="username"/>
+					<input type="password" placeholder="password"/>
+					<button id="btnLogin">
+						login
+					</button>
+					<p class="message">
+						Not registered? <a href="#"  style="color: #8f994c;text-decoration: none;">Join Us</a>
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
